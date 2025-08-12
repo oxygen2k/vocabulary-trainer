@@ -1,0 +1,23 @@
+[
+    {
+        "german": "Hund",
+        "english": "dog",
+        "level": 2,
+        "next_due": "2025-08-09",
+        "mode": "test"
+    },
+    {
+        "german": "Katze",
+        "english": "cat",
+        "level": 0,
+        "next_due": "2025-08-09",
+        "mode": "test"
+    },
+    {
+        "german": "Affe",
+        "english": "monkey",
+        "level": 2,
+        "next_due": "2025-08-09",
+        "mode": "test"
+    }
+]
