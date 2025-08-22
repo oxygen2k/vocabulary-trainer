@@ -25,12 +25,10 @@ def get_vocabulary(file_path):
 def save_vocabulary(file_path, vocabulary):
     """Atomisch in JSON speichern (temp file + replace)."""
     dirpath = os.path.dirname(file_path) or "."
-    print("dirpath", dirpath)
     fd, tmp_path = tempfile.mkstemp(dir=dirpath, prefix="vocab_", suffix=".tmp")
     try:
         with os.fdopen(fd, "w", encoding="utf-8") as f:
             json.dump(vocabulary, f, ensure_ascii=False, indent=4)
-            # print("geht hier rein", vocabulary)
         # os.replace muss im try-Block sein, damit bei einem Fehler
         # die temporäre Datei im finally-Block sicher gelöscht wird.
         os.replace(tmp_path, file_path)
@@ -141,7 +139,6 @@ elif mode == "Lernmodus":
     learn_vocab = [vocab for vocab in vocabulary if vocab.get("mode") == "learn"]
     today = datetime.date.today()
     due_today = [vocab for vocab in learn_vocab if datetime.date.fromisoformat(vocab["next_due"]) <= today]
-    print("due_today", due_today)
     st.write(f"Anzahl Vokabeln im Lernmodus: {len(learn_vocab)}")
     st.write(f"Davon heute fällig: {len(due_today)}")
 
@@ -156,7 +153,6 @@ elif mode == "Lernmodus":
 
         if st.session_state.current_index < len(st.session_state.due_today_list):
             vocab = st.session_state.due_today_list[st.session_state.current_index]
-            print("vocab:", vocab)
             st.write(f"**Was heißt:** {vocab['german']}")
     
             if not st.session_state.show_solution:
