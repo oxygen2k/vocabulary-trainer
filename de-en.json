@@ -2,15 +2,15 @@
     {
         "german": "Katze",
         "english": "cat",
-        "level": 1,
-        "next_due": "2025-08-15",
-        "mode": "test"
+        "level": 0,
+        "next_due": "2025-08-22",
+        "mode": "learn"
     },
     {
         "german": "Affe",
         "english": "monkey",
-        "level": 3,
-        "next_due": "2025-08-20",
-        "mode": "test"
+        "level": 4,
+        "next_due": "2025-08-22",
+        "mode": "learn"
     }
 ]
