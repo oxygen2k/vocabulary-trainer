@@ -136,6 +136,11 @@ elif mode == "Vokabelübersicht":
 
 #Lernmodus
 elif mode == "Lernmodus":
+    if "lm_file" not in st.session_state or st.session_state.lm_file != file_path:
+        if "due_today_list" in st.session_state:
+            del st.session_state.due_today_list
+        st.session_state.lm_file = file_path
+
     learn_vocab = [vocab for vocab in vocabulary if vocab.get("mode") == "learn"]
     today = datetime.date.today()
     due_today = [vocab for vocab in learn_vocab if datetime.date.fromisoformat(vocab["next_due"]) <= today]
