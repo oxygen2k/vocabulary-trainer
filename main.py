@@ -3,6 +3,7 @@ import csv
 import random
 import datetime 
 import streamlit as st
+import os, tempfile, json
 
 #HILFSFUNKTIONEN
 
@@ -22,8 +23,24 @@ def get_vocabulary(file_path):
     
 #JSON speichern
 def save_vocabulary(file_path, vocabulary):
-    with open(file_path, "w", encoding="utf-8") as file:
-        json.dump(vocabulary, file, ensure_ascii=False, indent=4)
+    """Atomisch in JSON speichern (temp file + replace)."""
+    dirpath = os.path.dirname(file_path) or "."
+    print("dirpath", dirpath)
+    fd, tmp_path = tempfile.mkstemp(dir=dirpath, prefix="vocab_", suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            json.dump(vocabulary, f, ensure_ascii=False, indent=4)
+            # print("geht hier rein", vocabulary)
+        # os.replace muss im try-Block sein, damit bei einem Fehler
+        # die temporäre Datei im finally-Block sicher gelöscht wird.
+        os.replace(tmp_path, file_path)
+    except Exception as e:
+        # Optional: Fehler loggen, um die Ursache zu sehen
+        st.error(f"Fehler beim Speichern der Datei: {e}")
+    finally:
+        # falls tmp noch existiert (z.B. bei Fehler in os.replace), löschen
+        if os.path.exists(tmp_path):
+            os.remove(tmp_path)
 
 #Intervall-Berechnung
 def calculate_next_due(level):
@@ -100,19 +117,21 @@ elif mode == "Vokabelübersicht":
     if not vocabulary:
         st.info("Keine Vokabeln vorhanden.")
     else:
-        header_cols = st.columns([3, 3, 2, 2, 1])
+        header_cols = st.columns([3, 3, 2, 2, 2, 1])
         header_cols[0].write("Deutsch")
         header_cols[1].write(f"{foreign_key.capitalize()}")
         header_cols[2].write("Modus")
         header_cols[3].write("Fällig am")
+        header_cols[4].write("Level")
 
         for i, vocab in enumerate(vocabulary):
-            col1, col2, col3, col4, col5 = st.columns([3, 3, 2, 2, 1])
+            col1, col2, col3, col4, col5, col6 = st.columns([3, 3, 2, 2, 2, 1])
             col1.write(vocab["german"])
             col2.write(vocab.get(foreign_key, ""))
             col3.write(vocab.get("mode", "-"))
             col4.write(vocab.get("next_due", "-"))
-            if col5.button("Löschen", key=f"del_{i}"):
+            col5.write(vocab.get("level", "-"))
+            if col6.button("Löschen", key=f"del_{i}"):
                 vocabulary.pop(i)
                 save_vocabulary(file_path, vocabulary)
                 st.experimental_rerun()
@@ -122,7 +141,7 @@ elif mode == "Lernmodus":
     learn_vocab = [vocab for vocab in vocabulary if vocab.get("mode") == "learn"]
     today = datetime.date.today()
     due_today = [vocab for vocab in learn_vocab if datetime.date.fromisoformat(vocab["next_due"]) <= today]
-
+    print("due_today", due_today)
     st.write(f"Anzahl Vokabeln im Lernmodus: {len(learn_vocab)}")
     st.write(f"Davon heute fällig: {len(due_today)}")
 
@@ -137,6 +156,7 @@ elif mode == "Lernmodus":
 
         if st.session_state.current_index < len(st.session_state.due_today_list):
             vocab = st.session_state.due_today_list[st.session_state.current_index]
+            print("vocab:", vocab)
             st.write(f"**Was heißt:** {vocab['german']}")
     
             if not st.session_state.show_solution:
@@ -148,6 +168,7 @@ elif mode == "Lernmodus":
                 st.session_state.feedback = st.radio("Wusstes Du's?", ["Ja", "Nein"], horizontal=True, key=f"fb_{vocab['german']}")
 
                 if st.button("Weiter"):
+                    # Vokabel im session_state aktualisieren
                     if st.session_state.feedback == "Ja":
                         vocab["level"] += 1
                         vocab["mode"] = "test"
@@ -155,7 +176,14 @@ elif mode == "Lernmodus":
                     else:
                         vocab["level"] = 0
                         vocab["next_due"] = calculate_next_due(vocab["level"])
-                
+                    
+                    # Die aktualisierte Vokabel in der Hauptliste 'vocabulary' finden und ersetzen
+                    # Das ist nötig, da 'vocabulary' bei jedem Rerun neu geladen wird.
+                    for i, v in enumerate(vocabulary):
+                        if v["german"] == vocab["german"]:
+                            vocabulary[i] = vocab
+                            break
+                    
                     save_vocabulary(file_path, vocabulary)
 
                     st.session_state.current_index += 1
@@ -167,15 +195,15 @@ elif mode == "Lernmodus":
 elif mode == "Prüfungsmodus":
     today = datetime.date.today()
     test_vocab = [vocab for vocab in vocabulary if vocab.get("mode") == "test"]
-    due_vocab = [vocab for vocab in vocabulary if  vocab.get("mode") == "test" and datetime.date.fromisoformat(vocab["next_due"]) <= today]
+    due_vocab = [vocab for vocab in test_vocab if datetime.date.fromisoformat(vocab["next_due"]) <= today]
 
     st.write(f"Anzahl Vokabeln im Prüfungsmodus: {len(test_vocab)}")
     st.write(f"Davon heute fällig: {len(due_vocab)}")
 
     if not due_vocab:
         st.info("Keine Vokabeln sind heute fällig. Übe erst im Lernmodus.")
-
     else:
+        # Session State initialisieren oder zurücksetzen, wenn die Sprache wechselt
         if "pm_file" not in st.session_state or st.session_state.pm_file != file_path:
             st.session_state.pm_file = file_path
             st.session_state.due_vocab = random.sample(due_vocab, len(due_vocab))
@@ -187,7 +215,10 @@ elif mode == "Prüfungsmodus":
         vocab_list = st.session_state.due_vocab
 
         if st.session_state.current_index >= len(vocab_list):
-            st.success("Alle fälligen Vokabeln sind durch.")
+            st.success("Alle fälligen Vokabeln geprüft!")
+            if st.button("Nochmal prüfen"):
+                del st.session_state.pm_file # Löst eine Neuinitialisierung aus
+                st.experimental_rerun()
         else:
             idx = st.session_state.current_index
             vocab = vocab_list[idx]
@@ -195,31 +226,36 @@ elif mode == "Prüfungsmodus":
             st.write(f"Was heißt: **{vocab['german']}**?")
 
             if not st.session_state.show_result:
-                form_key = f"pm_form_{idx}"
                 with st.form(key=f"pm_form_{idx}"):
                     answer_input = st.text_input("Antwort eingeben:", key=f"ans_input_{idx}")
                     submitted = st.form_submit_button("Überprüfen")
 
                 if submitted:
-                    user_answer = (answer_input or "").lower()
+                    user_answer = (answer_input or "").strip().lower()
                     correct_answer = vocab[foreign_key].lower()
                     is_correct = (user_answer == correct_answer)
 
                     if is_correct:
-                        st.success("Richtig!")
                         vocab["level"] += 1
                     else:
-                        st.error(f"Falsch. Richtige Antwort: {vocab[foreign_key]}")
                         vocab["level"] = max(0, vocab["level"] - 1)
-                        vocab["mode"] = "learn"
+                        vocab["mode"] = "learn" # Zurück in den Lernmodus bei Fehler
 
                     vocab["next_due"] = calculate_next_due(vocab["level"])
+                    # Die aktualisierte Vokabel in der Hauptliste 'vocabulary' finden und ersetzen
+                    for i, v in enumerate(vocabulary):
+                        if v["german"] == vocab["german"]:
+                            vocabulary[i] = vocab
+                            break
+                    
                     save_vocabulary(file_path, vocabulary)
 
                     st.session_state.show_result = True
                     st.session_state.last_check_correct = is_correct
                     st.session_state.last_check_answer = vocab[foreign_key]
+                    st.experimental_rerun()
             else:
+                # Ergebnis anzeigen
                 if st.session_state.last_check_correct:
                     st.success("Richtig!")
                 else:
@@ -230,3 +266,4 @@ elif mode == "Prüfungsmodus":
                     st.session_state.show_result = False
                     st.session_state.last_check_correct = None
                     st.session_state.last_check_answer = ""
+                    st.experimental_rerun()
