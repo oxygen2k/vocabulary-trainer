@@ -2,29 +2,36 @@
     {
         "german": "Hund",
         "spanish": "el perro",
-        "level": 3,
+        "level": 2,
         "next_due": "2025-08-18",
-        "mode": "test"
+        "mode": "learn"
     },
     {
         "german": "Katze",
         "spanish": "el gato",
-        "level": 1,
-        "next_due": "2025-08-13",
-        "mode": "test"
+        "level": 2,
+        "next_due": "2025-08-18",
+        "mode": "learn"
     },
     {
         "german": "Affe",
         "spanish": "el mono",
         "level": 3,
         "next_due": "2025-08-18",
-        "mode": "test"
+        "mode": "learn"
     },
     {
         "german": "Papagei",
         "spanish": "el loro",
         "level": 0,
+        "mode": "test",
+        "next_due": "2025-08-14"
+    },
+    {
+        "german": "Ball",
+        "spanish": "la pelota",
+        "level": 0,
         "mode": "learn",
-        "next_due": "2025-08-11"
+        "next_due": "2025-08-18"
     }
 ]

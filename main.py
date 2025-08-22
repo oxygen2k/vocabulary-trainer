@@ -49,11 +49,12 @@ language, foreign_key = language_display[choose_language]
 file_path = f"{language}.json"
 
 #Modus wählen
-mode = st.sidebar.radio("Modus wählen", ["Lernmodus", "Prüfungsmodus", "Neue Vokabel hinzufügen", "Vokabeln aus CSV importieren"])
+mode = st.sidebar.radio("Modus wählen", ["Lernmodus", "Prüfungsmodus", "Vokabelübersicht", "Neue Vokabel hinzufügen", "Vokabeln aus CSV importieren"])
 vocabulary = get_vocabulary(file_path)
 
 #Vokabeln hinzufügen (json)
 if mode == "Neue Vokabel hinzufügen":
+    vocabulary = get_vocabulary(file_path)
     german = st.text_input("Deutsches Wort:")
     foreign_word = st.text_input(f"{foreign_key.capitalize()} Wort:")
     if st.button("Hinzufügen"):
@@ -72,6 +73,7 @@ if mode == "Neue Vokabel hinzufügen":
 
 #Vokabeln hinzufügen via CSV
 elif mode == "Vokabeln aus CSV importieren":
+    vocabulary = get_vocabulary(file_path)
     uploaded = st.file_uploader("CSV-Datei hochladen", type="csv")
     if uploaded:
         reader = csv.reader(uploaded.read().decode("utf-8").splitlines(), delimiter=";")
@@ -91,48 +93,140 @@ elif mode == "Vokabeln aus CSV importieren":
         save_vocabulary(file_path, vocabulary)
         st.success(f"Vokabeln wurden erfolgreich importiert.")
 
+#Vokabeln anzeigen
+elif mode == "Vokabelübersicht":
+    st.header("Alle Vokablen")
+    st.write(f"Anzahl aller Vokabeln: {len(vocabulary)}")
+    if not vocabulary:
+        st.info("Keine Vokabeln vorhanden.")
+    else:
+        header_cols = st.columns([3, 3, 2, 2, 1])
+        header_cols[0].write("Deutsch")
+        header_cols[1].write(f"{foreign_key.capitalize()}")
+        header_cols[2].write("Modus")
+        header_cols[3].write("Fällig am")
+
+        for i, vocab in enumerate(vocabulary):
+            col1, col2, col3, col4, col5 = st.columns([3, 3, 2, 2, 1])
+            col1.write(vocab["german"])
+            col2.write(vocab.get(foreign_key, ""))
+            col3.write(vocab.get("mode", "-"))
+            col4.write(vocab.get("next_due", "-"))
+            if col5.button("Löschen", key=f"del_{i}"):
+                vocabulary.pop(i)
+                save_vocabulary(file_path, vocabulary)
+                st.experimental_rerun()
+
 #Lernmodus
 elif mode == "Lernmodus":
     learn_vocab = [vocab for vocab in vocabulary if vocab.get("mode") == "learn"]
-    if not learn_vocab:
+    today = datetime.date.today()
+    due_today = [vocab for vocab in learn_vocab if datetime.date.fromisoformat(vocab["next_due"]) <= today]
+
+    st.write(f"Anzahl Vokabeln im Lernmodus: {len(learn_vocab)}")
+    st.write(f"Davon heute fällig: {len(due_today)}")
+
+    if not due_today:
         st.info("Keine Vokabeln im Lernmodus.")
     else:
-        random.shuffle(learn_vocab)
-        for vocab in learn_vocab:
-            with st.form(key=vocab["german"]):
-                st.write(f"**Was heißt:** {vocab['german']}")
-                show  = st.form_submit_button("Lösung anzeigen")
-                if show:
-                    st.write(f"Antwort: {vocab[foreign_key]}")
-                    feedback = st.radio("Wusstes Du's?", ["Ja", "Nein"], horizontal=True, key=f"fb_{vocab['german']}")
-                    if feedback == "Ja":
+        if "due_today_list" not in st.session_state:
+            st.session_state.due_today_list = random.sample(due_today, len(due_today))
+            st.session_state.current_index = 0 
+            st.session_state.show_solution = False
+            st.session_state.feedback = None
+
+        if st.session_state.current_index < len(st.session_state.due_today_list):
+            vocab = st.session_state.due_today_list[st.session_state.current_index]
+            st.write(f"**Was heißt:** {vocab['german']}")
+    
+            if not st.session_state.show_solution:
+                if st.button("Lösung anzeigen"):
+                    st.session_state.show_solution = True
+                    st.experimental_rerun()
+            else:
+                st.write(f"Antwort: {vocab[foreign_key]}")
+                st.session_state.feedback = st.radio("Wusstes Du's?", ["Ja", "Nein"], horizontal=True, key=f"fb_{vocab['german']}")
+
+                if st.button("Weiter"):
+                    if st.session_state.feedback == "Ja":
                         vocab["level"] += 1
                         vocab["mode"] = "test"
-                        vocab["next_due"] = calculate_next_due(vocab["level"])
+                        vocab["next_due"] = datetime.date.today().isoformat()
                     else:
                         vocab["level"] = 0
-                        vocab["next_due"] = calculate_next_due(0)
+                        vocab["next_due"] = calculate_next_due(vocab["level"])
+                
                     save_vocabulary(file_path, vocabulary)
+
+                    st.session_state.current_index += 1
+                    st.session_state.show_solution = False
+                    st.session_state.feedback = None
+                    st.experimental_rerun()
 
 #Prüfungsmodus
 elif mode == "Prüfungsmodus":
     today = datetime.date.today()
-    due_vocab = [v for v in vocabulary if  v.get("mode") == "test" and datetime.date.fromisoformat(v["next_due"]) <= today]
+    test_vocab = [vocab for vocab in vocabulary if vocab.get("mode") == "test"]
+    due_vocab = [vocab for vocab in vocabulary if  vocab.get("mode") == "test" and datetime.date.fromisoformat(vocab["next_due"]) <= today]
+
+    st.write(f"Anzahl Vokabeln im Prüfungsmodus: {len(test_vocab)}")
+    st.write(f"Davon heute fällig: {len(due_vocab)}")
+
     if not due_vocab:
         st.info("Keine Vokabeln sind heute fällig. Übe erst im Lernmodus.")
+
     else:
-        random.shuffle(due_vocab)
-        for vocab in due_vocab:
-            answer = st.text_input(f"Was heißt: {vocab['german']}?", key=f"q_{vocab['german']}")
-            if st.button(f"Antwort prüfen: {vocab['german']}"):
-                if answer.lower() == vocab[foreign_key].lower():
-                    st.success("Richtig!")
-                    vocab["level"] += 1
-                else:
-                    st.error(f"Falsch. Richtige Antwort: {vocab[foreign_key]}")
-                    if vocab["level"] > 0:
-                        vocab["level"] -= 1
+        if "pm_file" not in st.session_state or st.session_state.pm_file != file_path:
+            st.session_state.pm_file = file_path
+            st.session_state.due_vocab = random.sample(due_vocab, len(due_vocab))
+            st.session_state.current_index = 0
+            st.session_state.show_result = False
+            st.session_state.last_check_correct = None
+            st.session_state.last_check_answer = ""
+
+        vocab_list = st.session_state.due_vocab
+
+        if st.session_state.current_index >= len(vocab_list):
+            st.success("Alle fälligen Vokabeln sind durch.")
+        else:
+            idx = st.session_state.current_index
+            vocab = vocab_list[idx]
+
+            st.write(f"Was heißt: **{vocab['german']}**?")
+
+            if not st.session_state.show_result:
+                form_key = f"pm_form_{idx}"
+                with st.form(key=f"pm_form_{idx}"):
+                    answer_input = st.text_input("Antwort eingeben:", key=f"ans_input_{idx}")
+                    submitted = st.form_submit_button("Überprüfen")
+
+                if submitted:
+                    user_answer = (answer_input or "").lower()
+                    correct_answer = vocab[foreign_key].lower()
+                    is_correct = (user_answer == correct_answer)
+
+                    if is_correct:
+                        st.success("Richtig!")
+                        vocab["level"] += 1
                     else:
+                        st.error(f"Falsch. Richtige Antwort: {vocab[foreign_key]}")
+                        vocab["level"] = max(0, vocab["level"] - 1)
                         vocab["mode"] = "learn"
-                vocab["next_due"] = calculate_next_due(vocab["level"])
-                save_vocabulary(file_path, vocabulary)
+
+                    vocab["next_due"] = calculate_next_due(vocab["level"])
+                    save_vocabulary(file_path, vocabulary)
+
+                    st.session_state.show_result = True
+                    st.session_state.last_check_correct = is_correct
+                    st.session_state.last_check_answer = vocab[foreign_key]
+            else:
+                if st.session_state.last_check_correct:
+                    st.success("Richtig!")
+                else:
+                    st.error(f"Falsch. Richtige Antwort: {st.session_state.last_check_answer}")
+
+                if st.button("Weiter", key=f"next_{idx}"):
+                    st.session_state.current_index += 1
+                    st.session_state.show_result = False
+                    st.session_state.last_check_correct = None
+                    st.session_state.last_check_answer = ""

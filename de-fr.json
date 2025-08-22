@@ -3,49 +3,105 @@
         "german": "Hund",
         "french": "le chien",
         "level": 1,
-        "next_due": "2025-08-13",
+        "next_due": "2025-08-18",
         "mode": "test"
     },
     {
         "german": "Katze",
         "french": "le chat",
-        "level": 1,
-        "next_due": "2025-08-13",
+        "level": 0,
+        "next_due": "2025-08-18",
         "mode": "test"
     },
     {
         "german": "Affe",
         "french": "le singe",
-        "level": 1,
-        "next_due": "2025-08-13",
+        "level": 0,
+        "next_due": "2025-08-18",
         "mode": "test"
     },
     {
         "german": "Papagei",
         "french": "Le perroquet",
-        "level": 1,
+        "level": 0,
         "mode": "test",
-        "next_due": "2025-08-13"
+        "next_due": "2025-08-14"
     },
     {
         "german": "biegen",
         "french": "courber",
-        "level": 0,
-        "mode": "learn",
-        "next_due": "2025-08-11"
+        "level": 1,
+        "mode": "test",
+        "next_due": "2025-08-20"
     },
     {
         "german": "springen",
         "french": "sauter",
-        "level": 0,
-        "mode": "learn",
-        "next_due": "2025-08-12"
+        "level": 1,
+        "mode": "test",
+        "next_due": "2025-08-15"
     },
     {
-        "german": "beschweren",
-        "french": "csv",
+        "german": "Schnürsenkel",
+        "french": "le lacet",
+        "level": 1,
+        "mode": "test",
+        "next_due": "2025-08-17"
+    },
+    {
+        "german": "Stuhl",
+        "french": "la chaise",
+        "level": 1,
+        "mode": "test",
+        "next_due": "2025-08-20"
+    },
+    {
+        "german": "Daten",
+        "french": "les données",
         "level": 0,
         "mode": "learn",
-        "next_due": "2025-08-12"
+        "next_due": "2025-08-21"
+    },
+    {
+        "german": "Lieferant",
+        "french": "le télétravail",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-21"
+    },
+    {
+        "german": "Wäsche",
+        "french": "la lessive",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-21"
+    },
+    {
+        "german": "sich schämen",
+        "french": "avoir honte",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-21"
+    },
+    {
+        "german": "stur",
+        "french": "têtu",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-21"
+    },
+    {
+        "german": "gerne",
+        "french": "volontiers",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-21"
+    },
+    {
+        "german": "Durchfall",
+        "french": "la diarrhée",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-21"
     }
 ]
