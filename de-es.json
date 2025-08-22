@@ -33,5 +33,26 @@
         "level": 0,
         "mode": "learn",
         "next_due": "2025-08-22"
+    },
+    {
+        "german": "Bett",
+        "spanish": "la cama",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-22"
+    },
+    {
+        "german": "Kopf",
+        "spanish": "la cabeza ",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-22"
+    },
+    {
+        "german": "dann",
+        "spanish": "entonces",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-22"
     }
 ]
