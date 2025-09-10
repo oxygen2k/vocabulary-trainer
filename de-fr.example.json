@@ -1,0 +1,1878 @@
+[
+    {
+        "german": "Hund",
+        "french": "le chien",
+        "level": 1,
+        "next_due": "2025-08-25",
+        "mode": "test"
+    },
+    {
+        "german": "Katze",
+        "french": "le chat",
+        "level": 2,
+        "next_due": "2025-08-27",
+        "mode": "test"
+    },
+    {
+        "german": "Affe",
+        "french": "le singe",
+        "level": 2,
+        "next_due": "2025-08-27",
+        "mode": "test"
+    },
+    {
+        "german": "Papagei",
+        "french": "Le perroquet",
+        "level": 2,
+        "mode": "test",
+        "next_due": "2025-08-27"
+    },
+    {
+        "german": "biegen",
+        "french": "courber",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-24"
+    },
+    {
+        "german": "springen",
+        "french": "sauter",
+        "level": 2,
+        "mode": "test",
+        "next_due": "2025-08-27"
+    },
+    {
+        "german": "Schnürsenkel",
+        "french": "le lacet",
+        "level": 2,
+        "mode": "test",
+        "next_due": "2025-08-27"
+    },
+    {
+        "german": "Stuhl",
+        "french": "la chaise",
+        "level": 2,
+        "mode": "test",
+        "next_due": "2025-08-27"
+    },
+    {
+        "german": "Daten",
+        "french": "les données",
+        "level": 2,
+        "mode": "test",
+        "next_due": "2025-08-27"
+    },
+    {
+        "german": "Wäsche",
+        "french": "la lessive",
+        "level": 2,
+        "mode": "test",
+        "next_due": "2025-08-27"
+    },
+    {
+        "german": "sich schämen",
+        "french": "avoir honte",
+        "level": 2,
+        "mode": "test",
+        "next_due": "2025-08-27"
+    },
+    {
+        "german": "stur",
+        "french": "têtu",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-24"
+    },
+    {
+        "german": "gerne",
+        "french": "volontiers",
+        "level": 2,
+        "mode": "test",
+        "next_due": "2025-08-27"
+    },
+    {
+        "german": "Durchfall",
+        "french": "la diarrhée",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-24"
+    },
+    {
+        "german": "Fingernagel",
+        "french": "l'ongle",
+        "level": 2,
+        "mode": "test",
+        "next_due": "2025-08-27"
+    },
+    {
+        "german": "sich etwas zutrauen",
+        "french": "se sentir capable de",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich überwinden",
+        "french": "se surpasser / se forcer",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "ins Blaue hinein",
+        "french": "au hasard / sans plan précis",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "auf Nummer sicher gehen",
+        "french": "prendre des précautions",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "ein Auge auf etwas werfen",
+        "french": "jeter un œil à",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "etwas in Betracht ziehen",
+        "french": "prendre en considération",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "den Überblick verlieren",
+        "french": "perdre la vue d'ensemble",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "den Überblick behalten",
+        "french": "garder une vue d'ensemble",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "etwas in Angriff nehmen",
+        "french": "se mettre à quelque chose",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich etwas einrichten",
+        "french": "s'organiser",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "auf etwas stoßen",
+        "french": "tomber sur",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich durchbeißen",
+        "french": "tenir bon",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich zurechtfinden",
+        "french": "s'orienter / se débrouiller",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "etwas in Erfahrung bringen",
+        "french": "obtenir des informations",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Auskunft erteilen",
+        "french": "donner des renseignements",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich erkundigen",
+        "french": "se renseigner",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "nachfragen",
+        "french": "demander des précisions",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "etwas in Auftrag geben",
+        "french": "passer commande / confier",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "lieferbar",
+        "french": "disponible",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "vorrätig",
+        "french": "en stock",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "ausverkauft",
+        "french": "épuisé",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Lieferzeit",
+        "french": "délai de livraison",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Versandkosten",
+        "french": "frais d'expédition",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Rücksendung",
+        "french": "retour",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Rückgaberecht",
+        "french": "droit de retour",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Garantie",
+        "french": "la garantie",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Gewährleistung",
+        "french": "la garantie légale",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Reklamation",
+        "french": "la réclamation",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "umtauschen",
+        "french": "échanger",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "erstatten",
+        "french": "rembourser",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Kauf auf Rechnung",
+        "french": "achat à crédit / facturation",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "auf Rechnung kaufen",
+        "french": "acheter à crédit",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Angebot einholen",
+        "french": "demander un devis",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Preisnachlass",
+        "french": "remise",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Sonderangebot",
+        "french": "promotion",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Schnäppchen",
+        "french": "bonne affaire",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "auf die Ersatzbank",
+        "french": "sur le banc de touche (fig.)",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "etwas aufheben",
+        "french": "garder / conserver",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "aufbewahren",
+        "french": "conserver",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "lagern",
+        "french": "stocker",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Stauraum",
+        "french": "espace de rangement",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "ausmisten",
+        "french": "faire du tri",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "einrichten",
+        "french": "aménager",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Möbel zusammenbauen",
+        "french": "assembler des meubles",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "abmontieren",
+        "french": "démonter",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "gebraucht kaufen",
+        "french": "acheter d'occasion",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "secondhand",
+        "french": "d'occasion",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Flohmarkt",
+        "french": "marché aux puces",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Handwerker",
+        "french": "artisan / ouvrier qualifié",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "nachbessern",
+        "french": "corriger / améliorer",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "reparieren lassen",
+        "french": "faire réparer",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Gewohnheiten ändern",
+        "french": "changer d'habitudes",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich an etwas gewöhnen",
+        "french": "s'habituer à",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "aus Gewohnheit",
+        "french": "par habitude",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "auf etwas verzichten",
+        "french": "renoncer à",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich einschränken",
+        "french": "se restreindre",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich etwas leisten",
+        "french": "se permettre quelque chose",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sorgenfrei",
+        "french": "sans souci",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "vorsorgen",
+        "french": "prendre des dispositions",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "vorsorglich",
+        "french": "préventif",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "eine Versicherung abschließen",
+        "french": "souscrire une assurance",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Kündigungsfrist",
+        "french": "préavis de résiliation",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "befristet",
+        "french": "à durée déterminée",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "unbefristet",
+        "french": "à durée indéterminée",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Überstunden",
+        "french": "heures supplémentaires",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Gleitzeit",
+        "french": "horaires flexibles",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Teilzeit",
+        "french": "temps partiel",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Vollzeit",
+        "french": "temps plein",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Fehlzeit",
+        "french": "absence",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "krankmelden",
+        "french": "signaler une maladie",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich freinehmen",
+        "french": "prendre un congé",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Urlaub beantragen",
+        "french": "demander des congés",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Dienstreise",
+        "french": "voyage d'affaires",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "geschäftlich",
+        "french": "professionnel",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "privat",
+        "french": "privé",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "verabreden",
+        "french": "prendre rendez-vous",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "eine Verabredung absagen",
+        "french": "annuler un rendez-vous",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "auf jemanden zugehen",
+        "french": "aller vers quelqu'un",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Kontakt knüpfen",
+        "french": "se faire des contacts",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "in Kontakt bleiben",
+        "french": "rester en contact",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "den Kontakt abbrechen",
+        "french": "rompre le contact",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "freundschaftlich",
+        "french": "amical",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "konfliktfähig",
+        "french": "capable de gérer les conflits",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "einen Kompromiss finden",
+        "french": "trouver un compromis",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich versöhnen",
+        "french": "se réconcilier",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "etwas auf sich zukommen lassen",
+        "french": "laisser les choses venir",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "entspannt bleiben",
+        "french": "rester détendu",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "unter Druck stehen",
+        "french": "être sous pression",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "stressresistent",
+        "french": "résistant au stress",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "nervenstark",
+        "french": "à sang-froid",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "mitfühlend",
+        "french": "compatissant",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "taktvoll",
+        "french": "plein de tact",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "direkt",
+        "french": "direct",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "zurückhaltend",
+        "french": "réservé",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "offenherzig",
+        "french": "franc / ouvert",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich einmischen",
+        "french": "s'immiscer",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "aufdringlich",
+        "french": "insistant",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "das Wort ergreifen",
+        "french": "prendre la parole",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich äußern",
+        "french": "s'exprimer",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "seine Meinung vertreten",
+        "french": "défendre son opinion",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich ausdrücken",
+        "french": "s'exprimer",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "komplex",
+        "french": "complexe",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "anspruchsvoll",
+        "french": "exigeant",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "lügen",
+        "french": "mentir",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "unehrlich",
+        "french": "malhonnête",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "ehrlich",
+        "french": "honnête",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "zuverlässig",
+        "french": "fiable",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "vertrauenswürdig",
+        "french": "digne de confiance",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "ein Versprechen halten",
+        "french": "tenir une promesse",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Verantwortung übernehmen",
+        "french": "assumer la responsabilité",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "verantwortungsbewusst",
+        "french": "responsable",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich verpflichten zu",
+        "french": "s'engager à",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "pflichtbewusst",
+        "french": "consciencieux",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "etwas delegieren",
+        "french": "déléguer quelque chose",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "an etwas herangehen",
+        "french": "aborder quelque chose",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "systematisch",
+        "french": "systématique",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "strukturiert arbeiten",
+        "french": "travailler de manière structurée",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "priorisieren",
+        "french": "prioriser",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Termine einhalten",
+        "french": "respecter les délais",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Frist",
+        "french": "échéance / délai",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "aufschieben",
+        "french": "remettre à plus tard",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "prokrastinieren",
+        "french": "procrastiner",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "gründlich",
+        "french": "approfondi",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "oberflächlich",
+        "french": "superficiel",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sorgfältig",
+        "french": "soigneux",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "präzise",
+        "french": "précis",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "fehleranfällig",
+        "french": "sujet aux erreurs",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "ein Fehler unterlaufen",
+        "french": "faire une erreur",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "etwas beheben",
+        "french": "corriger quelque chose",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "bewahren",
+        "french": "préserver",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "aufbrauchen",
+        "french": "consommer / épuiser",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "nachfüllen",
+        "french": "recharger / remplir à nouveau",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "nachbestellen",
+        "french": "commander à nouveau",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "ergänzen",
+        "french": "compléter",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "ausreichend",
+        "french": "suffisant",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "unzureichend",
+        "french": "insuffisant",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "mangelhaft",
+        "french": "défectueux / insuffisant",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "qualitativ hochwertig",
+        "french": "de qualité supérieure",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "preiswert",
+        "french": "bon rapport qualité-prix",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "kostspielig",
+        "french": "coûteux",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sparsam",
+        "french": "économe",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "verschwenderisch",
+        "french": "dissipateur",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "in Raten zahlen",
+        "french": "payer en plusieurs fois",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "auf Rechnung",
+        "french": "sur facture",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "bar bezahlen",
+        "french": "payer en espèces",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "kontaktlos bezahlen",
+        "french": "payer sans contact",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Kreditkarte",
+        "french": "la carte de crédit",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Geld überweisen",
+        "french": "faire un virement",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "ein Konto eröffnen",
+        "french": "ouvrir un compte",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Bargeld",
+        "french": "liquide",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Rabatt",
+        "french": "remise",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Gutschrift",
+        "french": "crédit",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Bonität",
+        "french": "solvabilité",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Schufa-Auskunft",
+        "french": "fiche de solvabilité (Schufa)",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Terminkalender",
+        "french": "agenda",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "notieren",
+        "french": "noter",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "erinnern an",
+        "french": "rappeler / rappeler quelque chose",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "eine Liste erstellen",
+        "french": "faire une liste",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Prioritäten setzen",
+        "french": "établir des priorités",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Routine",
+        "french": "routine",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "alltäglich",
+        "french": "quotidien",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "alltägliche Pflichten",
+        "french": "les tâches quotidiennes",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Pflichten teilen",
+        "french": "partager les tâches",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich etwas abgewöhnen",
+        "french": "se défaire d'une habitude",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "ausgiebig",
+        "french": "copieux / abondant",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "satt sein",
+        "french": "être rassasié",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich ernähren",
+        "french": "se nourrir",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "auswärts essen",
+        "french": "manger au restaurant",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "zubereiten",
+        "french": "préparer",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "aufwärmen",
+        "french": "réchauffer",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "übrig bleiben",
+        "french": "rester",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "restlos",
+        "french": "complètement",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Reste verwerten",
+        "french": "utiliser les restes",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "haltbar",
+        "french": "qui se conserve",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Mindesthaltbarkeitsdatum",
+        "french": "date limite de consommation",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "verderblich",
+        "french": "périssable",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "biologisch / Bio",
+        "french": "biologique",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "regional",
+        "french": "local",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "saisonal",
+        "french": "de saison",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Frische",
+        "french": "fraîcheur",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "schälen",
+        "french": "éplucher",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "schneiden",
+        "french": "couper",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "rühren",
+        "french": "remuer",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "abschmecken",
+        "french": "assaisonner",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "würzen",
+        "french": "épicer",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "einlegen",
+        "french": "mariner / conserver",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "eingefroren",
+        "french": "congelé",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "aufgetaute Lebensmittel",
+        "french": "denrées décongelées",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Lebensmittelverschwendung",
+        "french": "gaspillage alimentaire",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Mülltrennung",
+        "french": "tri des déchets",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "wiederverwenden",
+        "french": "réutiliser",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "recyceln",
+        "french": "recycler",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "nachhaltig leben",
+        "french": "vivre durablement",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Energie sparen",
+        "french": "économiser de l'énergie",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Licht ausschalten",
+        "french": "éteindre la lumière",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Heizung runterdrehen",
+        "french": "baisser le chauffage",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Wasser sparen",
+        "french": "économiser l'eau",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "öffentliche Verkehrsmittel nutzen",
+        "french": "utiliser les transports en commun",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "mit dem Fahrrad fahren",
+        "french": "aller à vélo",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "mitnehmen",
+        "french": "emporter",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "einpacken",
+        "french": "emballer",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Packung",
+        "french": "l'emballage",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Aufbewahrung",
+        "french": "stockage / conservation",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Anleitung befolgen",
+        "french": "suivre les instructions",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Sicherheitsvorkehrung",
+        "french": "mesure de sécurité",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Vorsicht",
+        "french": "prudence",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Gefahr vermeiden",
+        "french": "éviter le danger",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "erste Hilfe leisten",
+        "french": "donner les premiers secours",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Notruf",
+        "french": "appel d'urgence",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "die Nummer wählen",
+        "french": "composer le numéro",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich orientieren",
+        "french": "s'orienter",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "eine Route planen",
+        "french": "planifier un itinéraire",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Umleitung",
+        "french": "déviation",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Staugefahr",
+        "french": "risque d'embouteillage",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Verspätung in Kauf nehmen",
+        "french": "accepter un retard",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "anschlussfähig",
+        "french": "compatible avec une correspondance",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "weiterreisen",
+        "french": "continuer le voyage",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Übernachtung",
+        "french": "nuitée",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Unterkunft buchen",
+        "french": "réserver un hébergement",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Stornierungsbedingungen",
+        "french": "conditions d'annulation",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Frühstück inbegriffen",
+        "french": "petit-déjeuner inclus",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Vollpension",
+        "french": "pension complète",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Halbpension",
+        "french": "demi-pension",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Bewertung hinterlassen",
+        "french": "laisser un avis",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Reiseversicherung",
+        "french": "assurance voyage",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Reisedokumente",
+        "french": "documents de voyage",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Impfung",
+        "french": "vaccination",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Visum beantragen",
+        "french": "demander un visa",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "zollfrei",
+        "french": "duty-free / hors taxes",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Gepäck aufgeben",
+        "french": "enregistrer les bagages",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Handgepäck",
+        "french": "bagage à main",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Flug umbuchen",
+        "french": "changer le vol",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Sitzplatz reservieren",
+        "french": "réserver une place",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Sicherheitskontrolle",
+        "french": "contrôle de sécurité",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Gepäckband",
+        "french": "tapis roulant à bagages",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Ausgang",
+        "french": "sortie",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Ankunft",
+        "french": "arrivée",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Abflug",
+        "french": "départ",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Termin verschieben",
+        "french": "déplacer un rendez-vous",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Terminkollision",
+        "french": "conflit d'agenda",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "flexibel sein",
+        "french": "être flexible",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "unvorhergesehen",
+        "french": "imprévu",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "etwas vorziehen",
+        "french": "avancer quelque chose",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "etwas verschieben",
+        "french": "reporter quelque chose",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "eine Frist setzen",
+        "french": "fixer un délai",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "eine Frist einhalten",
+        "french": "respecter un délai",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Bescheid geben",
+        "french": "informer / donner une réponse",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "sich absprechen",
+        "french": "se mettre d'accord",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Koordination",
+        "french": "coordination",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Teamarbeit",
+        "french": "travail d'équipe",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "eigenständig arbeiten",
+        "french": "travailler de façon autonome",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Feedback geben",
+        "french": "donner un retour",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    },
+    {
+        "german": "Feedback erhalten",
+        "french": "recevoir un retour",
+        "level": 0,
+        "mode": "learn",
+        "next_due": "2025-08-23"
+    }
+]
