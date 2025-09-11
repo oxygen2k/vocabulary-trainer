@@ -127,7 +127,7 @@ def study_mode(vocabulary, foreign_key):
 def test_mode(vocabulary, foreign_key):
     today = datetime.date.today()
 
-    due_vocab = [v for v in vocabulary if  v.get("mode") == "test" and datetime.date.fromisoformat(v["next_due"]) <= today]
+    due_vocab = [vocab for vocab in vocabulary if  vocab.get("mode") == "test" and datetime.date.fromisoformat(vocab["next_due"]) <= today]
     
     if not due_vocab:
         print("Keine Vokabeln sind heute fällig. Übe erst im Lernmodus.")
