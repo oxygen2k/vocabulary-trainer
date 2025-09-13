@@ -23,22 +23,11 @@ def get_vocabulary(file_path):
     
 #JSON speichern
 def save_vocabulary(file_path, vocabulary):
-    """Atomisch in JSON speichern (temp file + replace)."""
-    dirpath = os.path.dirname(file_path) or "."
-    fd, tmp_path = tempfile.mkstemp(dir=dirpath, prefix="vocab_", suffix=".tmp")
     try:
-        with os.fdopen(fd, "w", encoding="utf-8") as f:
+        with open(file_path, "w", encoding="utf-8") as f:
             json.dump(vocabulary, f, ensure_ascii=False, indent=4)
-        # os.replace muss im try-Block sein, damit bei einem Fehler
-        # die temporäre Datei im finally-Block sicher gelöscht wird.
-        os.replace(tmp_path, file_path)
     except Exception as e:
-        # Optional: Fehler loggen, um die Ursache zu sehen
         st.error(f"Fehler beim Speichern der Datei: {e}")
-    finally:
-        # falls tmp noch existiert (z.B. bei Fehler in os.replace), löschen
-        if os.path.exists(tmp_path):
-            os.remove(tmp_path)
 
 #Intervall-Berechnung
 def calculate_next_due(level):
@@ -204,7 +193,6 @@ elif mode == "Prüfungsmodus":
     if not due_vocab:
         st.info("Keine Vokabeln sind heute fällig. Übe erst im Lernmodus.")
     else:
-        # Session State initialisieren oder zurücksetzen, wenn die Sprache wechselt
         if "pm_file" not in st.session_state or st.session_state.pm_file != file_path:
             st.session_state.pm_file = file_path
             st.session_state.due_vocab = random.sample(due_vocab, len(due_vocab))
@@ -218,7 +206,7 @@ elif mode == "Prüfungsmodus":
         if st.session_state.current_index >= len(vocab_list):
             st.success("Alle fälligen Vokabeln geprüft!")
             if st.button("Nochmal prüfen"):
-                del st.session_state.pm_file # Löst eine Neuinitialisierung aus
+                del st.session_state.pm_file
                 st.experimental_rerun()
         else:
             idx = st.session_state.current_index
@@ -240,10 +228,9 @@ elif mode == "Prüfungsmodus":
                         vocab["level"] += 1
                     else:
                         vocab["level"] = max(0, vocab["level"] - 1)
-                        vocab["mode"] = "learn" # Zurück in den Lernmodus bei Fehler
+                        vocab["mode"] = "learn"
 
                     vocab["next_due"] = calculate_next_due(vocab["level"])
-                    # Die aktualisierte Vokabel in der Hauptliste 'vocabulary' finden und ersetzen
                     for i, v in enumerate(vocabulary):
                         if v["german"] == vocab["german"]:
                             vocabulary[i] = vocab
@@ -256,7 +243,6 @@ elif mode == "Prüfungsmodus":
                     st.session_state.last_check_answer = vocab[foreign_key]
                     st.experimental_rerun()
             else:
-                # Ergebnis anzeigen
                 if st.session_state.last_check_correct:
                     st.success("Richtig!")
                 else:
